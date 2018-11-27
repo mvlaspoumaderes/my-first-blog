@@ -7,12 +7,13 @@
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #E8DAE8;
     font-family: "Times New Roman", Times, serif;
-    font-size: 38pt;
+    font-size: 55pt;
     text-decoration: none;
+    margin-left: 50px;
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 300px;
 }
 
 h1, h2, h3, h4 {
