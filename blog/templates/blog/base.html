@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>My first Django Blog</title>
+        <title>FOETRA Complejo Estomba</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -17,11 +17,11 @@
 	    {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
 	    {% endif %}
-            <h1><a href="/">El blog de Vicky</a></h1>
+            <h1><a href="/">Novedades Complejo Estomba</a></h1>
         </div>
         <div class="content container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-sm-8">
                     {% block content %}
                     {% endblock %}
                 </div>

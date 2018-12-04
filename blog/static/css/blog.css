@@ -1,19 +1,19 @@
 .page-header {
-    background-color: #C993C8;
+    background-color: #000099;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #E8DAE8;
+    color: #ffffff;
     font-family: "Times New Roman", Times, serif;
-    font-size: 55pt;
+    font-size: 30pt;
     text-decoration: none;
     margin-left: 50px;
 }
 
 .content {
-    margin-left: 300px;
+    margin-left: 100px;
 }
 
 h1, h2, h3, h4 {
@@ -49,6 +49,5 @@ h1, h2, h3, h4 {
 
 .clearfix {
     overflow: auto;
-} 
-'''If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
+}  '''If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
 Then we can add overflow: auto; to the containing element to fix this problem. Example: https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix'''
