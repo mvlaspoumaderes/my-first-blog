@@ -29,6 +29,18 @@ ALLOWED_HOSTS = ['162.243.87.231']
 #For login/logout
 LOGIN_REDIRECT_URL = '/'
 
+#All uploaded files are slugified by default. To disable this feature set as False
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+
+#This restricts access to uploaded images to the uploading user (e.g. each user only sees and uploads their own images).
+CKEDITOR_RESTRICT_BY_USER = True
+
+#To show directories on the “Browse Server” page.
+CKEDITOR_BROWSE_SHOW_DIRS = True
+
+CKEDITOR_RESTRICT_BY_DATE = True
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +117,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -121,4 +147,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+
+CKEDITOR_UPLOAD_PATH = '/uploads/'
+
+MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'media')
+
+STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static'),
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'templates'),
+)
