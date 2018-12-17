@@ -29,18 +29,6 @@ ALLOWED_HOSTS = ['162.243.87.231']
 #For login/logout
 LOGIN_REDIRECT_URL = '/'
 
-#All uploaded files are slugified by default. To disable this feature set as False
-CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
-
-#This restricts access to uploaded images to the uploading user (e.g. each user only sees and uploads their own images).
-CKEDITOR_RESTRICT_BY_USER = True
-
-#To show directories on the “Browse Server” page.
-CKEDITOR_BROWSE_SHOW_DIRS = True
-
-CKEDITOR_RESTRICT_BY_DATE = True
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -150,7 +138,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-CKEDITOR_UPLOAD_PATH = '/uploads/'
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'media')
 
